@@ -18,14 +18,23 @@ int main(void) {
         if (index != strlen(user_input)){
             char argument_list[2][30];    
             int i=0;
-
+            int s=0;
             while(user_input[i]!=','){
-                argument_list[0][i]=user_input[i];
+		if(user_input[i] ==' '){
+			i++;
+			continue;
+		}
+                argument_list[0][s]=user_input[i];
                 i++;    
+		s++;
             }
             i++;
-            int s = 0;
+            s = 0;
             while(i<strlen(user_input)){
+		if(user_input[i] ==' '){
+                        i++;
+                        continue;
+                }
                 argument_list[1][s]=user_input[i];
                 i++;
                 s++;

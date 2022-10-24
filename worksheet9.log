@@ -1,0 +1,8 @@
+  351  vim sigusr.c
+  352  make all
+  353  ./sigusr &
+  354  kill -SIGUSR1 2937
+  355  kill -SIGUSR2 2937
+  356  kill -SIGCONT 2937
+  357  kill -9 2937
+  358  history > worksheet9.log
